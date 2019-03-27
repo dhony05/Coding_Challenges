@@ -4,11 +4,12 @@ public class swaping {
 
 	
 	/**
-	 * Swapping integers without using temporary variable
+	 * Swapping two integers without using temporary variable
 	 * @param args
 	 */
 	public static void main(String[] args){
 	
+		// testing 
 		swap_integer(4,7);
 		swap_integer(5,7);
 		swap_integer(6,7);
@@ -18,12 +19,11 @@ public class swaping {
 	public static void swap_integer(int a, int b){
 		
 		
-		int arrayInt[] = new int[2];
-		arrayInt[0] = a;
-		arrayInt[1] = b;
+		a = a + b;  // in the first case a = 11 because 4+7 = 11
 		
-		a = arrayInt[1];
-		b = arrayInt[0];
+		b = a - b; // b is equal to 4  because 11 - 7 =  4 
+		
+		a = a - b;  // a is change again a = 7 because  11 - 4 = 7
 		
 		System.out.println("a now is: " + a + " and b is now: "+ b);
 		
