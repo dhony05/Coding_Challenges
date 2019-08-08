@@ -11,6 +11,7 @@ public class SquareChallenge {
 
         squareDigits(5555);
         squareDigits(12345);
+        //Testing 
     }
     //Here I created two for loops one to populate the newN array and one to populate the string builder
     public static int squareDigits(int n) {
