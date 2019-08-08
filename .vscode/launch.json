@@ -1,0 +1,104 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Expanding<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.Expanding",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Line<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.Line",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Order<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.Order",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UniqueNumber<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.UniqueNumber",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-findShortString<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.findShortString",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Earth<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "planet_earth.Earth",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MergeString<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "random_challenges.MergeString",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SearchingContinueValue<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "random_challenges.SearchingContinueValue",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-swaping<JAVA_Challenges>",
+            "request": "launch",
+            "mainClass": "random_challenges.swaping",
+            "projectName": "JAVA_Challenges"
+        }
+    ]
+}
