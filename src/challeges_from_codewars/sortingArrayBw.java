@@ -16,7 +16,7 @@ public class sortingArrayBw {
     public static void main(String[] args) {
         int[] test = { 5, 3, 2, 8, 1, 4 };
         int[] test1 = { 5, 8, 9, 10, 2, 6, 1, 4 };
-        System.out.println(Arrays.toString(sortArray(test)));
+        System.out.println(Arrays.toString(sortArray2(test)));
         System.out.println(Arrays.toString(sortArray(test1)));
 
     }
@@ -40,6 +40,42 @@ public class sortingArrayBw {
                     }
                 }
             }
+        }
+
+        return array;
+
+    }
+    /*
+     * This one is anotherone with better time complexity than the one above
+     * O(NlogN) < O(N^2) consist in get index of odd numbers add it to a new array
+     * sort it put then back in the original array
+     */
+
+    public static int[] sortArray2(int[] array) {
+        int[] tempArray = new int[array.length];
+        int max = Arrays.stream(array).max().getAsInt();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 1) {
+                tempArray[i] = array[i];
+                array[i] = 0;
+            } else {
+                if (max % 2 == 0) {
+                    tempArray[i] = max;
+                } else {
+                    tempArray[i] = max + 1;
+                }
+            }
+        }
+        Arrays.sort(tempArray);
+        int index = 0;
+        for (int i = 0; i < tempArray.length; i++) {
+            if (array[i] == 0) {
+                array[i] = tempArray[index];
+                index++;
+            } else {
+                i++;
+            }
+
         }
 
         return array;
