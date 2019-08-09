@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - sortingArrayBw",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.sortingArrayBw",
+            "projectName": "JAVA_Challenges"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",

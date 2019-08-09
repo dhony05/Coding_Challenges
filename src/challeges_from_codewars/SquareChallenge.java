@@ -1,7 +1,9 @@
+package challeges_from_codewars;
+
 /*
 Welcome. In this Challenge you are asked to square every digit of a number.
 
-For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+For example, if we run 9119 through the function, 811181 will come out, because 9^2 is 81 and 1^2 is 1.
 
 Note: The function accepts an integer and returns an integer
  */
@@ -11,9 +13,11 @@ public class SquareChallenge {
 
         squareDigits(5555);
         squareDigits(12345);
-        //Testing 
+        // Testing
     }
-    //Here I created two for loops one to populate the newN array and one to populate the string builder
+
+    // Here I created two for loops one to populate the newN array and one to
+    // populate the string builder
     public static int squareDigits(int n) {
         int leng = String.valueOf(n).length();
         int[] newN = new int[leng];
