@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ASCIItransform",
+            "request": "launch",
+            "mainClass": "random_challenges.ASCIItransform",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BasicEncrypt",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.BasicEncrypt",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - sortingArrayBw",
             "request": "launch",
             "mainClass": "challeges_from_codewars.sortingArrayBw",
