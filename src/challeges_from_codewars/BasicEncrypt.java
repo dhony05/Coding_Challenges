@@ -12,9 +12,18 @@ public class BasicEncrypt {
 
     public static String encrypt(String text, int rule) {
         StringBuilder sb = new StringBuilder();
+        int newRule;
         for (int i = 0; i < text.length(); i++) {
-            sb.append((char)((int)text.charAt(i)+rule));   
+            if((rule + (int)text.charAt(i)+rule)>=256){
+                newRule = rule -256;
+
+            sb.append((char)((int)text.charAt(i)+newRule));   
+        } else{
+            sb.append((char)((int)text.charAt(i)+rule)); 
         }
+    
+
+    }
         System.out.println(sb.toString());
         return sb.toString();
 
@@ -23,7 +32,8 @@ public class BasicEncrypt {
     public static void main(String[] args) {
         encrypt("admin",1);
         encrypt("ggsabuvdtqe", 361);
-        
+        encrypt("dkjtg", 409);
+
 
     }
 }

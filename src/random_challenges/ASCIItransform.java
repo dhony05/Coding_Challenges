@@ -16,6 +16,7 @@ public class ASCIItransform {
 
     public static void main(String[] args) {
         transform("admin");
+        transform("java");
 
     }
 }
