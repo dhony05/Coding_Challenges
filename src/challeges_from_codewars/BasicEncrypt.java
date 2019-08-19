@@ -10,29 +10,29 @@ encrypt("a",1) = "b"
 public class BasicEncrypt {
 
 
-    public static String encrypt(String text, int rule) {
-        StringBuilder sb = new StringBuilder();
-        int newRule;
-        for (int i = 0; i < text.length(); i++) {
-            if((rule + (int)text.charAt(i)+rule)>=256){
-                newRule = rule -256;
-
-            sb.append((char)((int)text.charAt(i)+newRule));   
-        } else{
-            sb.append((char)((int)text.charAt(i)+rule)); 
+    public static char loop(int num){
+        while(num>255){
+        num -= 256;
         }
-    
+        return (char)num;
+        }
 
+    public static String encrypt(String text, int rule) {
+        StringBuilder sb = new StringBuilder(text);
+        for (int i = 0; i < sb.length(); i++) {
+            sb.setCharAt(i, loop(sb.charAt(i) + rule));
+            
     }
-        System.out.println(sb.toString());
-        return sb.toString();
+    String str = sb.toString();
+        System.out.println(str);
+        return str;
 
     }
 
     public static void main(String[] args) {
         encrypt("admin",1);
         encrypt("ggsabuvdtqe", 361);
-        encrypt("dkjtg", 409);
+        encrypt("qtd", 120);
 
 
     }
