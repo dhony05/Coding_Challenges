@@ -9,24 +9,16 @@ encrypt("a",1) = "b"
 */
 public class BasicEncrypt {
 
-
-    public static char loop(int num){
-        while(num>255){
-        num -= 256;
-        }
-        return (char)num;
-        }
+    public static char looping(int num){
+        while(num>255){num -= 256;}return (char)num;}
 
     public static String encrypt(String text, int rule) {
         StringBuilder sb = new StringBuilder(text);
         for (int i = 0; i < sb.length(); i++) {
-            sb.setCharAt(i, loop(sb.charAt(i) + rule));
-            
-    }
-    String str = sb.toString();
-        System.out.println(str);
-        return str;
-
+            sb.setCharAt(i, looping(sb.charAt(i) + rule));         
+            }
+        System.out.println(sb.toString());
+        return sb.toString();
     }
 
     public static void main(String[] args) {
