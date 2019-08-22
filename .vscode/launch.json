@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CountingDuplicates",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.CountingDuplicates",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ASCIItransform",
             "request": "launch",
             "mainClass": "random_challenges.ASCIItransform",
