@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CenturyReturn",
+            "request": "launch",
+            "mainClass": "challeges_from_codewars.CenturyReturn",
+            "projectName": "JAVA_Challenges"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CountingDuplicates",
             "request": "launch",
             "mainClass": "challeges_from_codewars.CountingDuplicates",

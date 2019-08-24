@@ -22,7 +22,7 @@ Example
 /** 
  * Algorithm I used was Convert to lowercase ,Sort it then covert it to
  * String[] to iterate and compare , also compare with a temp variable
- *  if is not equal to the temp but it equal to current idex then count
+ *  if is not equal to the temp but it equal to current index then count
  *  should be incremented
  * then return count
  */
