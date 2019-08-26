@@ -1,5 +1,5 @@
 package challeges_from_codewars;
-
+//Given a year, return the century it is in.
 public class CenturyReturn{
 
 
@@ -9,8 +9,10 @@ public class CenturyReturn{
        System.out.println(century(1000));
         System.out.println(century(1560));
         System.out.println(century(2000));
+        System.out.println(getCentury(2000));
 
     }
+   
 
     public static int century(int number) {
         // your code goes here
@@ -18,8 +20,6 @@ public class CenturyReturn{
        if(number <=0 ){
            cent = 0;
 
-
-        
        }else if(number <= 100){
            cent = 1;
 
@@ -33,5 +33,11 @@ public class CenturyReturn{
        }
         return cent;
       }
+       // this is a must simple way to do it
+    public static int getCentury(int number){
+        return ((number + 99) /100) ;
+    }
+
+
       
 }
