@@ -42,6 +42,8 @@ public class palindromeCheck {
 			
 	}
 	
+	
+	/// one line?
 	public static List getPalindromes(String[] str) {
 		
 		ArrayList<String> result = new ArrayList<String>();
