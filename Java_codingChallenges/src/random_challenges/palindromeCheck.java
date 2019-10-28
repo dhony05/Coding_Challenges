@@ -29,8 +29,8 @@ public class palindromeCheck {
 	
 	
 	public static boolean isPalindrome(String str) {
-		StringBuilder sb  = new StringBuilder();
-		sb.append(str);
+		StringBuilder sb  = new StringBuilder(str);
+//		sb.append(str);
 		if(str.equalsIgnoreCase(sb.reverse().toString())) {
 			System.out.println("true");
 			return true;
