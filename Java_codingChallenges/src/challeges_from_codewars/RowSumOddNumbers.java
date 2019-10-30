@@ -50,7 +50,7 @@ public class RowSumOddNumbers {
 	       
     }
 	
-	//contant time complexity 
+	//constant time complexity 
 	
 	public static int rowSumOddNumbers2(int n) {
 	
