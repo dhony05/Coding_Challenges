@@ -6,7 +6,7 @@ public class FindingFactorial {
 		 SearchFactorial(5);
 		 SearchFactorial(1);
 		 SearchFactorial(0);
-		 SearchFactorial(7);
+		 System.out.println(SearchFact(5));
 
 	}
 	
@@ -19,6 +19,19 @@ public class FindingFactorial {
 		System.out.println(result);
 		return result;
 		
+	}
+	
+	
+	/// adding recursion to it
+	
+	public static int SearchFact(int number) {
+		if (number <= 1){
+			return 1;
+		}
+		
+		else {
+			return number * SearchFact(number-1);
+		}
 	}
 
 }
