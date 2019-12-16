@@ -58,6 +58,13 @@ Note: The function accepts an integer and returns an integer<a href="https://git
     <li>Given a string of words, return the length of the shortest word(s).
 	  String will never be empty and you do not need to account for different data
 	  types.<a href="https://github.com/dhony05/Java_Challenges/blob/master/Java_codingChallenges/src/challeges_from_codewars/findShortString.java">(Done: Java) </a></li>
+	  
+  <li> In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'.
+	  If there are one or two good ideas, return 'Publish!', 
+	  if there are more than 2 return 'I smell a series!'. 
+	   If there are no good ideas, as is often the case, return 'Fail!'.<a href="https://github.com/dhony05/Java_Challenges/blob/master/Java_codingChallenges/src/challeges_from_codewars/WellOfIdeas.java">(Done: Java) </a></li>
+  
+    
  <!--   <li><a href="">(Done: Java) </a></li>
     <li><a href="">(Done: Java) </a></li> -->
     
