@@ -31,7 +31,8 @@ public class javaAnagrams {
         scan.close();
         boolean ret = isAnagram(a, b);
         System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
-		
+        boolean bol = false;
+        System.out.println((bol)? "true": "false");
 	}
 	
 	 /***
