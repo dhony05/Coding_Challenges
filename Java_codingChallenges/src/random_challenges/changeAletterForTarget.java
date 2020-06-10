@@ -11,9 +11,7 @@ public class changeAletterForTarget {
 		
 		System.out.print("Enter target letter:");
 		String target = sc.nextLine();
-		while(target.length() == 1) {
-			System.out.println("target has more than one letter please try again");
-		}
+		
 		System.out.println("Enter new value: ");
 		String newValue = sc.nextLine();
 		
