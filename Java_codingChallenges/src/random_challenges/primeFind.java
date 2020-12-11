@@ -6,9 +6,9 @@ public class primeFind {
 
 	static long[] firstPrimes  = {2,3,5,7};
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
-		System.out.println(findNthPrime(1));
+		System.out.println(findNthPrime(50));
 	}
 	
 	public static long findNthPrime(long nth) {
@@ -18,14 +18,15 @@ public class primeFind {
 			primes.add(a);
 		}
 		if(nth > 3) {
-			for(long  i = 2; primes.size()<=nth ; i++) {
+			int count =0;
+			for(long  i = firstPrimes[3]; primes.size()<=nth ; i++ ) {
 				if((i%2 !=0)&&(i%3 !=0)&&(i%5 !=0)&&(i%7 !=0)) {
 				primes.add(i);
 				}
 			}
 		}
 		
-		System.out.println(primes.size());
+		System.out.println("Size: " + primes.size());
 		return primes.get((int) nth-1);
 	}
 
