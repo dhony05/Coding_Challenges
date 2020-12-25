@@ -31,13 +31,9 @@ public class IPaddressChallenge1 {
 					"10.0.0.3 - frank [10/Dec/2000:12:34:56 - 0500] \"GET /a.gif HTTP/1.0\" 200 234",
 					"10.0.9.4 - frank [10/Dec/2000:12:34:56 - 0500] \"GET /a.gif HTTP/1.0\" 200 234",
 					"10.0.10.10 - frank [10/Dec/2000:12:34:56 - 0500] \"GET /a.gif HTTP/1.0\" 200 234",
-					
-				
+									
 			};
 		
-
-		getIP(logs[0]);
-		getIP(logs[1]);
 		getMostLoggedIp(logs);
 	}
 	
@@ -71,8 +67,7 @@ public class IPaddressChallenge1 {
 				map.put(ip, times);
 				
 			}
-			
-			
+						
 		}
 		System.out.println(map);
 		
@@ -89,7 +84,6 @@ public class IPaddressChallenge1 {
 		System.out.println("Most logged ip: "+ ip);
 		return ip;
 	}
-	
 	
 
 }
