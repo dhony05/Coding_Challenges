@@ -5,6 +5,7 @@ public class ReversingInteger {
 	public static void main(String[] args) {
 		reverseInt(4501);
 		reverseInt(45);
+		
 
 	}
 
