@@ -12,7 +12,7 @@ public class MaximumSubArr {
 	
 	int[] a2 = {-5,-1,-8,-9};
 	
-	System.out.println(getMaximumSubSum3(a1));
+	System.out.println(getMaximumSubSum(a1));
 
 	System.out.println(getMaximumSubSum(a2));
 	}
@@ -87,29 +87,29 @@ public class MaximumSubArr {
 	}
 	
 	
-	// Clean way
+	// Clean way2
 		public static int getMaximumSubSum3(int[] array) {
-			//ArrayList<Integer> sums = new ArrayList<Integer>();
-			int temp = 0;
-			int sum = 0;
+		
+			int tempMax = 0;
+			int currentSum = 0;
 			for (int i = 0; i < array.length; i++) {
 			
 				for (int j = i; j < array.length; j++) {
-					sum += array[j];
+					currentSum += array[j];
 				}
 			
-				if(temp < sum) {
-					temp = sum;
+				if(tempMax < currentSum) {
+					tempMax = currentSum;
 				}
-				sum = 0;
+				currentSum = 0;
 						
 			}
-			if(temp < 0) {
-				return sum;
+			if(tempMax < 0) {
+				return currentSum;
 			}
 		
 			
-			return temp;
+			return tempMax;
 		}
 		
 		
