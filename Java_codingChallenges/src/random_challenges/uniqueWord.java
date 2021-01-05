@@ -10,7 +10,7 @@ public class uniqueWord {
 
 	public static void main(String[] args) {
 		String sentence = "Hello HELLO World WORLD hi";
-		
+		System.out.println("........" +sentence.repeat(2));
 		findUnique(sentence);
 
 	}
