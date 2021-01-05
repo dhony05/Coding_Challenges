@@ -10,24 +10,23 @@ public class SumOfNumbersString {
 		sumOfNums("klk9n0pr42i4");//55
 		sumOfNums("num24rrt43");//67
 		sumOfNums("esoy3yrt450");//453
+		sumOfNums("chris12323413414134abc");
 
 	}
 	
 	
 	
-	public static int sumOfNums(String str) {
-		int currentSum = 0;
-		int maxSum = 0;
+	public static long sumOfNums(String str) {
+		long currentSum = 0;
+		long maxSum = 0;
 		
 		for(int i = 0; i< str.length(); i++) {
 			if(Character.isDigit(str.charAt(i)) &&(currentSum == 0)) {
-				currentSum = Integer.parseInt(String.valueOf(str.charAt(i)));
-				
+				currentSum = Integer.parseInt(String.valueOf(str.charAt(i)));	
 			}
-			else if((Character.isDigit(str.charAt(i))&& (currentSum != 0))){
-					
+			else if((Character.isDigit(str.charAt(i))&& (currentSum != 0))){	
 				currentSum  = (currentSum * 10) +Integer.parseInt(String.valueOf(str.charAt(i)));    
-				
+			
 			}else {
 				maxSum += currentSum;
 				currentSum = 0;
