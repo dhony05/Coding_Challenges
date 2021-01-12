@@ -17,6 +17,13 @@ public class LongesCreatedWord {
 
 	}
 	
+	/***
+	 * Takes a String and a dictionary  and create a set of words(Strings)
+	 *  that can be created from the input String
+	 * @param letters
+	 * @param dict
+	 * @return
+	 */
 	public static Set<String>longestWord(String letters,ArrayList<String> dict){
 		Set <String> result = new HashSet<String>();
 		int max = 0;
@@ -39,6 +46,12 @@ public class LongesCreatedWord {
 		
 	}
 	
+	/***
+	 * A helper method that will check if a word can be created from the inputWords
+	 * @param letters
+	 * @param dString
+	 * @return a boolean
+	 */
 	public static boolean isCreated(String letters, String dString) {
 		int count = 0;
 		HashMap<Character,Integer> dStringMap = new HashMap<Character,Integer>();
