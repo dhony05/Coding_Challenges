@@ -23,7 +23,7 @@ public class ShortesDistance {
 		
 		System.out.println(getDistance(words,wordBeg,wordEnd));
 		
-	}
+	}///Very ugly code : please don't judge
 	
 	public static String getDistance(String[] sentence,String word1,String word2) {
 		double startWord = 0.0;
