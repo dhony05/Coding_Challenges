@@ -14,7 +14,11 @@ public class LongesCreatedWord {
 		ArrayList<String> words =  new ArrayList<>(Arrays.asList(arrWords));
 		System.out.println(longestWord("tsgedo",words));// toes,does
 		
+		
+		String[] arrWords2 = {"cul","taka","culi","takata","tara","f","pata","puli"};
+		ArrayList<String> words2 =  new ArrayList<>(Arrays.asList(arrWords2));
 
+		System.out.println(longestWord("tcautlika",words2));
 	}
 	
 	/***

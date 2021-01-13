@@ -5,6 +5,30 @@ import java.util.HashMap;
 
 public class AverageGradeForStudent {
 
+	
+	/**
+	 * Given  a 2D String array where every row represents a test ->["student_name","test_score"],
+	 * It's also possible that students took multiple tests.
+	 * return the best Avg score
+	 * 
+	 * 
+	 * cases 
+	 * empty input best AVg score should be 0
+	 * negative and positive score are valid 
+	 * if avg of scores is a double, return the floor of that avg
+	 * 
+	 *
+		 * Input :[
+		 * 
+		 * ["Chris"]["100"]
+		 * ["Donny"]["90"]
+		 * ["Chris"]["30"]
+		 * 
+		 * ]
+		 * 
+		 * Output : 90
+		 */
+	
 	public static void main(String[] args) {
 		
 		String[][] stGrades = {
@@ -35,17 +59,10 @@ public class AverageGradeForStudent {
 		System.out.println(getStudentsAndGrades2(stGrades));
 		System.out.println("------------------------");
 		System.out.println(getStudentsAndGrades(negativeStGrades));
-		/***
-		 * Input :[
-		 * 
-		 * ["Chris"]["100"]
-		 * ["Donny"]["90"]
-		 * ["Chris"]["30"]
-		 * 
-		 * ]
-		 */
+		
 
 	}
+	
 	
 	public static int getStudentsAndGrades(String[][] stGrades){
 		HashMap<String,Integer> graStesMap = new HashMap<String,Integer> ();
@@ -116,9 +133,10 @@ public class AverageGradeForStudent {
 	 for(String student: graStesMap.keySet()) {
 		 currentAverage  = graStesMap.get(student).stream().reduce(0, (a,b)-> a+b)
 				 / graStesMap.get(student).size();
-		 if(currentAverage> maxAverage) {
-			 maxAverage = currentAverage;
-		 }
+//		 if(currentAverage> maxAverage) {
+//			 maxAverage = currentAverage;
+//		 }
+		 maxAverage = Math.max(currentAverage, maxAverage);
 	 }
 	System.out.println(graStesMap);
 	return maxAverage;
