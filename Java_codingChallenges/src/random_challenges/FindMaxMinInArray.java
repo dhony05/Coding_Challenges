@@ -8,6 +8,12 @@ public class FindMaxMinInArray {
 		
 		System.out.println("Minimun number in array: "+ getMin(arr));
 
+		String[] words = {"hello","minimum","eso","done"};
+		
+		System.out.println("Biggest word in array: "+ getBiggestWord(words));
+		
+		System.out.println("Smallest word in array: "+ getSmallestWord(words));
+		
 	}
 	
 	public static int getMax(int[] arr) {
@@ -29,7 +35,24 @@ public class FindMaxMinInArray {
 		}
 		return min;
 	}
-	
+	public static String getSmallestWord(String[] arr) {
+		String current = arr[0];
+		for(String s: arr) {
+			if(s.length()<current.length()) {
+				current = s;
+			}
+		}
+		return current;
+	}
+	public static String getBiggestWord(String[] arr) {
+		String current = arr[0];
+		for(String s: arr) {
+			if(s.length()>current.length()) {
+				current = s;
+			}
+		}
+		return current;
+	}
 	
 
 }
