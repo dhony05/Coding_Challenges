@@ -67,7 +67,7 @@ public class AverageGradeForStudent {
 	public static int getStudentsAndGrades(String[][] stGrades){
 		HashMap<String,Integer> graStesMap = new HashMap<String,Integer> ();
 		HashMap<String,Integer> occurrencesMap = new HashMap<String,Integer> ();
-		int count = 0;
+		//int count = 0;
 		int grade = 0;
 		if(stGrades.length == 0) {
 			return 0;
@@ -77,14 +77,14 @@ public class AverageGradeForStudent {
 				grade = Integer.parseInt((stGrades[i][j+1]));
 				if(!graStesMap.containsKey(stGrades[i][j])) {
 					graStesMap.put(stGrades[i][j], grade);
-					count = 1;
-					occurrencesMap.put(stGrades[i][j], count);
+				//	count = 1;
+					occurrencesMap.put(stGrades[i][j], 1);
 				}else {
 					grade += graStesMap.get(stGrades[i][j]);
 					graStesMap.put(stGrades[i][j], grade);
-					count = occurrencesMap.get(stGrades[i][j]);
-					count ++;
-					occurrencesMap.put(stGrades[i][j], count);
+//					count = occurrencesMap.get(stGrades[i][j]);
+//					count ++;
+					occurrencesMap.put(stGrades[i][j], occurrencesMap.get(stGrades[i][j])+1);
 				}
 			}
 		}
