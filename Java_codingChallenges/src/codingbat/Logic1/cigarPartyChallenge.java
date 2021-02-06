@@ -20,14 +20,17 @@ cigarParty(70, true) → true
 
 	public static boolean cigarParty(int cigars, boolean isWeekend) {
 		  
-		  if((cigars>=40)&&(cigars<=60) &&(!isWeekend)){
-		    return true;
-		  }else if((isWeekend)&&(cigars>60)){
-		    return true;
-		  }
-		  return false;
-		   
-		 
-		}
+		public boolean cigarParty(int cigars, boolean isWeekend) {
+			  
+			  if((cigars>=40)&&(cigars<=60) &&(!isWeekend)){
+			    return true;
+			  }else if((isWeekend)&&(cigars>=40)){
+			    return true;
+			  }
+			  return false;
+			   
+			 
+			}
+
 
 }
