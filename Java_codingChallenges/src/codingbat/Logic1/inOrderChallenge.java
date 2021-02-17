@@ -3,7 +3,7 @@ package codingbat.Logic1;
 public class inOrderChallenge {
 
 	public static void main(String[] args) {
-		
+		System.out.println(inOrder(1, 1, 2, true) );
 
 	}
 	
@@ -24,8 +24,9 @@ inOrder(1, 1, 2, true) → true
 	 */
 	public static boolean inOrder(int a, int b, int c, boolean bOk) {
 
-	    if(((bOk)&&((a==b)||(b<c))) || ((a<b)&&(b<c))){
-	      return true;
+	    if(bOk) {
+	    		return ((((a==b)||(b<c))) || ((a<b)&&(b<c)));
+//	      return true;
 	    }
 	    return false;
 	  }
