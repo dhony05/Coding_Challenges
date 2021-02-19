@@ -72,6 +72,6 @@ Note: The function accepts an integer and returns an integer<a href="https://git
   </ol>
   <ol> <a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/LeetCode">LeetCode challenges</a></ol>
   <ol> <a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/random_challenges">Random challenges</a></ol>
-  
+  <ol> <a href="https://github.com/dhony05/Coding_Challenges/tree/master/Java_codingChallenges/src/codingbat">CodingBat Challenges</a></ol>
   <ol><a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/hackerrank">Harkerrank challenges</a></ol>
 </ul>
