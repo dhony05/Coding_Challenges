@@ -5,6 +5,13 @@
 <p>The levels of the challenges are mixed, later I will enumerate them.</p>
 
 <ul>
+	
+  </ol>
+  <ol> <a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/LeetCode">LeetCode challenges</a></ol>
+  <ol> <a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/random_challenges">Random challenges</a></ol>
+  <ol> <a href="https://github.com/dhony05/Coding_Challenges/tree/master/Java_codingChallenges/src/codingbat">CodingBat Challenges</a></ol>
+  <ol><a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/hackerrank">Harkerrank challenges</a></ol>
+	
   <ol><h2>Codewars challenges</h2>
     <li>The most basic encryption method is to map a char to another char by a certain math rule.
  Because every char has an ASCII value, we can manipulate this value with a simple math expression. 
@@ -69,9 +76,4 @@ Note: The function accepts an integer and returns an integer<a href="https://git
     <li><a href="">(Done: Java) </a></li> -->
     
     
-  </ol>
-  <ol> <a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/LeetCode">LeetCode challenges</a></ol>
-  <ol> <a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/random_challenges">Random challenges</a></ol>
-  <ol> <a href="https://github.com/dhony05/Coding_Challenges/tree/master/Java_codingChallenges/src/codingbat">CodingBat Challenges</a></ol>
-  <ol><a href="https://github.com/dhony05/Java_Challenges/tree/master/Java_codingChallenges/src/hackerrank">Harkerrank challenges</a></ol>
 </ul>
