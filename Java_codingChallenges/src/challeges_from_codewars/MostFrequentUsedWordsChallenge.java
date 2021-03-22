@@ -14,7 +14,7 @@ public class MostFrequentUsedWordsChallenge {
 		System.out.println(top3("wont won't won't"));
 		System.out.println(top3("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e"));
 		System.out.println(top3("In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lancein the lance-rack, an old buckler, a lean hack, and a greyhound forcoursing. An olla of rather more beef than mutton, a salad on mostnights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extraon Sundays, made away with three-quarters of his income."));
-
+		System.out.println(top3("time, is the best time, in the life because life is life plus life"));
 	}
 	
 	 public static List<String> top3(String s) {
@@ -43,16 +43,16 @@ public class MostFrequentUsedWordsChallenge {
 	         Map<String, Integer> sortedMap = map.entrySet().stream()
                      .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
                      .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-	         System.out.println(sortedMap);
+//	         System.out.println(sortedMap);
 	         
 	         for(String str : sortedMap.keySet()) {
 
 	        		 filteredWords.add(str);
-	                if(sortedMap.get(str) == 4){
-	                  
-	                 
-	                  System.out.println(str + "here");
-	                }
+//	                if(sortedMap.get(str) == 4){
+//	                  
+//	                 
+//	                  System.out.println(str + "here");
+//	                }
 
 	         }
 	         
