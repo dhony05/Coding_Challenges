@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class StringMixChallenge {
 	static String encode ="";
-	
+	static String max = "";
 	static List<String> sameLen;
 	
 	public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class StringMixChallenge {
 	      // your code
 		Map<Character, Integer> s1Map = new HashMap<Character, Integer>();
 		Map<Character, Integer> s2Map = new HashMap<Character, Integer>();
-		
+		StringBuilder sb = new StringBuilder();
 	    for(char c : s1
 	    		.replaceAll("[^a-zA-Z0-9]", " ")
 	    		.replace(" ", "")
@@ -78,11 +78,64 @@ public class StringMixChallenge {
 	    	}
 	    }
 		sameLen =  Arrays.asList(encode.split("/"));
-//		System.out.println(sameLen);
-//		System.out.println(encode);
-//		
+		//System.out.println(sameLen);
 		
-		return formatSameLen(sameLen);
+		Map<String,List<String>> checkMap = new LinkedHashMap<>();
+		List<String> codes ;
+		for(String str : sameLen) {
+			 max = str.substring(3);
+			codes = new ArrayList<>();
+			if(!checkMap.containsKey(max)) {
+//				if(str.contains(max)) {
+					codes.add(str);
+					checkMap.put(max,codes);
+				
+			}else {
+				codes = checkMap.get(max);
+				codes.add(str); 
+				checkMap.put(max,codes);
+			}
+	
+		}
+		encode = "";
+		max = "";
+		for(String str: checkMap.keySet()) {
+			codes = checkMap.get(str);
+			if(codes.size() >1) {
+				codes.sort(String.CASE_INSENSITIVE_ORDER);
+//				for(String s: codes) {
+//					max =  s + "/";
+//					codes.add(max);
+//				}
+				encode += codes.toString() + "/";
+			}else {
+			encode += checkMap.get(str).toString() + "/";
+			
+			
+			}
+		}
+		
+		
+		encode = encode
+				.substring(0,encode.length()-1)
+				.replace("]","")
+				.replace("[","")
+				.replace(" ","/")
+				.replace(",", "")
+				.trim()
+				.replace(" ", "");
+				
+		
+		//System.out.println(checkMap);
+		
+		for(char c: encode.toCharArray()) {
+			
+			if (!Character.isAlphabetic(c)) {
+				
+			}
+		}
+		System.out.println(encode);
+		return encode;
 	}
 	
 	public static List<String> Modifier(Map<Character,Integer> map2, Map<Character,Integer> map1, char c) {
@@ -126,25 +179,6 @@ public class StringMixChallenge {
                  .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
                  .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 		 return sortedMap;
-	}
-	
-	// next step lexical
-	
-	public static String formatSameLen (List<String> lst) {
-		System.out.println(lst);
-		int fLen = lst.get(0).length();
-		int counter  =  Integer.valueOf(fLen-1);
-		for (int i = 0; i < lst.size()-1; i++) {
-			if(lst.get(0).startsWith(counter));
-			
-		}
-		
-		// format and sort
-		
-		
-		return encode;
-		
-		
 	}
 	
 
