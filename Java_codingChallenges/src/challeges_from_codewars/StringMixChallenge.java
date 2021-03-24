@@ -8,13 +8,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 
 public class StringMixChallenge {
-	static String encode ="";
-	static String max = "";
-	static List<String> sameLen;
 	
 	public static void main(String[] args) {
 		String s1="Are the kids at home? aaaaa fffff";
@@ -28,16 +26,19 @@ public class StringMixChallenge {
 		
 		
 	}
+	static String encode ="";
+	static String max = "";
+	static List<String> sameLen;
+	
 	
 	public static String mix(String s1, String s2) {
 	      // your code
-		Map<Character, Integer> s1Map = new HashMap<Character, Integer>();
-		Map<Character, Integer> s2Map = new HashMap<Character, Integer>();
+		Map<Character, Integer> s1Map = new TreeMap<Character, Integer>();
+		Map<Character, Integer> s2Map = new TreeMap<Character, Integer>();
 		StringBuilder sb = new StringBuilder();
 	    for(char c : s1
 	    		.replaceAll("[^a-zA-Z0-9]", " ")
 	    		.replace(" ", "")
-//	    		.toLowerCase()
 	    		.toCharArray()) {
 	    	if(s1Map.containsKey(c)) {
 	    		s1Map.put(c, s1Map.get(c) + 1);
@@ -51,7 +52,6 @@ public class StringMixChallenge {
 	    for(char c : s2
 	    		.replaceAll("[^a-zA-Z0-9]", " ")
 	    		.replace(" ", "")
-//	    		.toLowerCase()
 	    		.toCharArray()) {
 	    	if(s2Map.containsKey(c)) {
     		s2Map.put(c, s2Map.get(c) + 1);
@@ -59,12 +59,10 @@ public class StringMixChallenge {
 	    		s2Map.put(c, 1);
 	    	}
 	    }
-	    
-	    
-	    
+  
 	    s1Map = sortMapByValue(s1Map);
 	    s2Map = sortMapByValue(s2Map);
-//	    
+	    
 	    System.out.println(s1Map);
 	    System.out.println(s2Map);
 	    if(s1Map.size()< s2Map.size()) {	
@@ -103,10 +101,7 @@ public class StringMixChallenge {
 			codes = checkMap.get(str);
 			if(codes.size() >1) {
 				codes.sort(String.CASE_INSENSITIVE_ORDER);
-//				for(String s: codes) {
-//					max =  s + "/";
-//					codes.add(max);
-//				}
+
 				encode += codes.toString() + "/";
 			}else {
 			encode += checkMap.get(str).toString() + "/";
@@ -127,13 +122,24 @@ public class StringMixChallenge {
 				
 		
 		//System.out.println(checkMap);
-		
+		char previous = 0  ;
 		for(char c: encode.toCharArray()) {
 			
-			if (!Character.isAlphabetic(c)) {
-				
+			if (Character.isDigit(c) && (Character.isAlphabetic(previous))) {		
+				int len = c - '0' ;
+				for (int i = 0; i < len-1; i++) {
+					c = previous;
+					sb.append(previous);
+				}
 			}
+			else {
+			sb.append(c);
+			previous = c;
+			
+			}	
 		}
+		encode = sb.toString();
+	
 		System.out.println(encode);
 		return encode;
 	}
