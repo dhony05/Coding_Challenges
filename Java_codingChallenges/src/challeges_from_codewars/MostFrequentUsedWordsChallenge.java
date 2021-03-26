@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 public class MostFrequentUsedWordsChallenge {
@@ -31,7 +32,7 @@ public class MostFrequentUsedWordsChallenge {
 	        if(words.length == 0) {
 	        	return filteredWords;
 	        }
-	        Map<String,Integer> map = new LinkedHashMap<String,Integer>();
+	        Map<String,Integer> map = new TreeMap<String,Integer>();
 	         for(String str : words) {
 	        	 if(!str.equals(" ")&& !map.containsKey(str)) {
 	        		 map.put(str, 1);
@@ -40,12 +41,12 @@ public class MostFrequentUsedWordsChallenge {
 	        	 }
 	         }
 	         //Sort the map in a reverse order
-	         Map<String, Integer> sortedMap = map.entrySet().stream()
-                     .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
-                     .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+//	         Map<String, Integer> sortedMap = map.entrySet().stream()
+//                     .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
+//                     .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 //	         System.out.println(sortedMap);
 	         
-	         for(String str : sortedMap.keySet()) {
+	         for(String str : map.keySet()) {
 
 	        		 filteredWords.add(str);
 //	                if(sortedMap.get(str) == 4){
