@@ -1,7 +1,7 @@
 package codingbat.Maps1;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
+
 
 public class AllSwapChallenges {
 
@@ -15,32 +15,34 @@ public class AllSwapChallenges {
 		  if(strings.length == 0){
 		    return strings;
 		  }
-		  LinkedHashMap<Integer, String> map = new LinkedHashMap<Integer,String>();
 		  String temp = "";
-//		  for(String s : strings){
-//		    if(!map.containsKey(s)){
-//		      map.put(s,s.substring(0,1));
-//		    
-//		    }
-		  
+		  LinkedHashMap<String, Integer> map = new LinkedHashMap<String,Integer>();
 		  for (int i = 0; i < strings.length; i++) {
-			  if(!map.containsKey(strings[i].substring(0,1))){
-				  map.put(i,strings[i]);
-				  
-				 
-			  }
-//		    
-		
+			  temp = strings[i].substring(0,1);
+			  for (int j = i+1; j < strings.length; j++) {
+				if(!map.containsKey(strings[i])) {
+					//create a container map
+				  if(strings[j].startsWith(temp)) {
+					map.put(strings[i], i);
+					
+					//swapping
+					temp = strings[i];
+					strings[i] = strings[j];
+					strings[j] = temp;
+					break;
+					}
+				}else {
+					 map.remove(strings[j]);
+					 break;
+				}
+			}
+			  
+			
 		}
-		  
-//		  for(String s: strings) {
-//			  System.out.print(  s + ", ");
-//		  }
-		  
-//		  for(int s : map.keySet()) {
-//			  
-//		  }
-		   System.out.println(map);
+		  for (String string : strings) {
+				System.out.print(string + ", ");
+			}
+			
 		  return strings;
 	}
 
