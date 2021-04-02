@@ -1,4 +1,4 @@
-package codingbat.Maps1;
+package codingbat.Maps2;
 
 import java.util.LinkedHashMap;
 
@@ -25,7 +25,7 @@ public class firstSwapChallenge {
 //					
 				  if(strings[j].startsWith(currentString.substring(0,1) )&& ((!map.containsKey(strings[j])))) {
 				  
-				  
+				  //need to finish and clean this code ....
 					  map.put(currentString, i);
 					
 					//swapping

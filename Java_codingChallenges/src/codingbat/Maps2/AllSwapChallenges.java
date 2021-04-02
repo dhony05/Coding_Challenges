@@ -1,4 +1,4 @@
-package codingbat.Maps1;
+package codingbat.Maps2;
 
 import java.util.LinkedHashMap;
 
