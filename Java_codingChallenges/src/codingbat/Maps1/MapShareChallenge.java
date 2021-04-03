@@ -1,5 +1,7 @@
 package codingbat.Maps1;
 
+import java.util.Map;
+
 public class MapShareChallenge {
 
 	public static void main(String[] args) {
@@ -21,30 +23,11 @@ mapShare({"a": "aaa", "c": "meh", "d": "hi"}) → {"a": "aaa", "b": "aaa", "d": 
 	 */
 	
 	public Map<String, String> mapShare(Map<String, String> map) {
-		  //if(map.size() >1){
-		  if((map.containsKey("a") && map.containsKey("b") && map.containsKey("c")) ||
-		  (map.containsKey("a") && (!map.containsKey("b")) && map.containsKey("c")) &&
-		  (!map.get("a").equals("")))
-		  {
+		if(map.containsKey("a") && (!map.get("a").equals(""))){
 		      map.put("b",map.get("a"));
-		      map.remove("c");
-		      //return map;
-		  }else if(((map.containsKey("a")) && (map.containsKey("b"))&& (!map.containsKey("c"))) 
-		          &&(!map.get("a").equals(""))){
-		      map.put("b",map.get("a"));
-		      // return map;
-		  }else if (
-		    ((!map.containsKey("a")) && (map.containsKey("b")) && (map.containsKey("c")))||
-		    ((!map.containsKey("a")) && (!map.containsKey("b")) && (map.containsKey("c")))
-		    ){
+		      
+		    }
 		    map.remove("c");
-		    
-		  }
-		  
-		  // if((map.size() == 1) && (map.containsKey("c"))){
-		    map.remove("c");
-		  // }
-		  
 		  return map;
 		  }
 
