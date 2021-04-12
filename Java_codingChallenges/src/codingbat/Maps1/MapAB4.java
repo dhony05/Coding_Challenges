@@ -1,5 +1,7 @@
 package codingbat.Maps1;
 
+import java.util.Map;
+
 public class MapAB4 {
 
 	/***
