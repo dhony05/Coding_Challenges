@@ -15,4 +15,18 @@ makeBricks(3, 1, 8) → true
 makeBricks(3, 1, 9) → false
 makeBricks(3, 2, 10) → true
 	 */
+	
+	public boolean makeBricks(int small, int big, int goal) {
+		  int bb= big * 5;
+		  /**
+		   * bb + s >= g
+		   * 
+		   * g  % 5 <= s;
+		   * */
+		   
+		  return ((bb + small) >= goal && goal % 5 <= small );
+		  
+
+		}
+
 }
