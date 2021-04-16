@@ -19,6 +19,7 @@ makeBricks(3, 2, 10) → true
 	public boolean makeBricks(int small, int big, int goal) {
 		  int bb= big * 5;
 		  /**
+		   * logic 
 		   * bb + s >= g
 		   * 
 		   * g  % 5 <= s;
