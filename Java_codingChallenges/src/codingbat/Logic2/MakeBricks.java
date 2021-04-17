@@ -21,11 +21,11 @@ makeBricks(3, 2, 10) → true
 		  /**
 		   * logic 
 		   * bb + s >= g
-		   * 
 		   * g  % 5 <= s;
 		   * */
 		   
-		  return ((bb + small) >= goal && goal % 5 <= small );
+		  return ((bb + small) >= goal &&
+				  goal % 5 <= small );
 		  
 
 		}
