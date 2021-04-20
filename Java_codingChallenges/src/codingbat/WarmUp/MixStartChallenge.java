@@ -13,7 +13,7 @@ mixStart("pix snacks") → true
 mixStart("piz snacks") → false	
 
  * @param str
- * @return
+ * @return a boolean
  */
 	public boolean mixStart(String str) {
 		  return str.contains("ix");
