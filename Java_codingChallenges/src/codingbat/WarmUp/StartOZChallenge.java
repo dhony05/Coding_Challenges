@@ -19,6 +19,7 @@ startOz("oxx") → "o"
 	public String startOz(String str) {
 		  if(str.equals("")){
 		    return "";
+		    
 		  }
 		  if(str.startsWith("oz")){
 		    return "oz";
