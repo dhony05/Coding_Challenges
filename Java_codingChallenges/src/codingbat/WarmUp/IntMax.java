@@ -19,8 +19,14 @@ intMax(3, 2, 1) → 3
 	 */
 	
 	public int intMax(int a, int b, int c) {
-		  int currentMin = Math.max(a,b);
-		  return Math.max(currentMin, c);
+		  int currentMax = Math.max(a,b);
+		  return Math.max(currentMax, c);
 		}
+	
+	
+	public int intMin(int a, int b, int c) {
+		int currentMin = Math.min(a,b);
+		return Math.min(currentMin, c);
+	}
 
 }
