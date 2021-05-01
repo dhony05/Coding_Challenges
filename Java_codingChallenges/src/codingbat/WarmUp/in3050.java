@@ -4,7 +4,7 @@ public class in3050 {
 /*
  * 
  * 
- * 
+ * url: https://codingbat.com/prob/p132134
 Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive.
 
 
