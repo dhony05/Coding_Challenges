@@ -16,6 +16,7 @@ loneTeen(21, 19) → true
 loneTeen(13, 13) → false
 
 	 * @param a
+	 * 
 	 * @param b
 	 * @return
 	 */
